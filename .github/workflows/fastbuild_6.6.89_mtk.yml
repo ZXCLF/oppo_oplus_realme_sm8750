@@ -570,7 +570,7 @@ jobs:
           echo "Clang版本: $CLANG_VERSION"
           echo "LLD版本: $LLD_VERSION"
           pahole_version=$(pahole --version 2>/dev/null | head -n1); [ -z "$pahole_version" ] && echo "pahole版本：未安装" || echo "pahole版本：$pahole_version"
-          
+          export KBUILD_BUILD_TIMESTAMP="Tue Jul 1 19:48:18 UTC 2025"
           export CCACHE_LOGFILE="${{ github.workspace }}/kernel_workspace/ccache.log"
           export CCACHE_COMPILERCHECK="none"
           export CCACHE_BASEDIR="${{ github.workspace }}"
